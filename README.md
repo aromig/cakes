@@ -1,29 +1,7 @@
-# cakes
+# My Cakes
 
-## Project setup
-```
-npm install
-```
+A gallery of the cakes (mostly birthdays and special occasions) that I have made over the years, improving my skill and techniques along the way.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Built on
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[Vue](https://vuejs.org), [Vue CLI](https://cli.vuejs.org), & [vue-image-box](https://github.com/aromig/vue-image-box/)
