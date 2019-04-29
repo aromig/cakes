@@ -1,29 +1,68 @@
 <template>
   <div id="app">
     <h1>My Cakes</h1>
-    <div class="summary">
-      <p></p>
+    <div class="arrow bounce">
+      <a
+        href="#gallery"
+        title="Jump to Gallery"
+        aria-label="Jump to Cake Gallery"
+        >⌄</a
+      >
     </div>
-    <div class="gallery">
+    <div class="summary">
+      <p>
+        I've been baking and decorating my own birthday cakes since my oldest
+        son turned two years old. When I started, my skills were very mediocre
+        with me baking the cake in a large casserole dish and only frosting the
+        top. That kind of bare-minimum effort. Yikes!
+      </p>
+      <p>
+        Fortunately my confectionary skills have improved a bit over the years.
+        I'm still an amateur - far from profesional grade - but baking is one of
+        my pleasures in life. I don't have to be perfect as long as the cake
+        looks nice and people are happy with it. I have worked with frosting for
+        most of my creations but have recently been learning how to handle
+        fondant (and making my own buttercream from scratch) since this past
+        December.
+      </p>
+      <p>
+        The gallery below is in reverse chronological order (newest to oldest).
+        It's not a complete representation - sometimes the kids just want plain
+        cupcakes. Then I tell them they are boooring!
+      </p>
+    </div>
+    <div id="gallery" class="gallery">
       <div
         v-for="(image, imageIndex) in images"
         :key="imageIndex"
         @click="showImage(imageIndex)"
         class="gallery__image"
       >
-        <img :src="image" />
+        <img
+          :src="image.thumbUrl"
+          :alt="image.caption"
+          :title="image.caption"
+        />
       </div>
       <ImageBox
         :images="images"
         :index="imageIndex"
-        @close="index = null"
+        @close="imageIndex = null"
       ></ImageBox>
     </div>
+    <footer>
+      Site built with
+      <a href="https://vuejs.org" target="_blank">Vue.js</a> and
+      <a href="https://github.com/aromig/vue-image-box" target="_blank"
+        >vue-image-box</a
+      >
+    </footer>
   </div>
 </template>
 
 <script>
 import ImageBox from "vue-image-box";
+import cakesJSON from "./cakes.json";
 
 export default {
   name: "app",
@@ -33,23 +72,27 @@ export default {
   methods: {
     showImage: function(idx) {
       this.imageIndex = idx;
-    },
+    }
+    /* *** Don't need; importing from JSON now
     importAll(file) {
       file
         .keys()
         .reverse()
         .forEach(file => this.images.push(this.imageDir + file.slice(2)));
     }
+    */
   },
   data() {
     return {
+      bgColor: "rgba(51, 51, 51, .9)",
       imageIndex: null,
-      imageDir: "/images/cakes/",
-      images: []
+      images: [...cakesJSON]
     };
   },
   mounted() {
-    this.importAll(require.context("../public/images/cakes/", true, /\.jpg$/));
+    // *** Don't need; importing from JSON now
+    // Gather file names from cakes directory
+    // this.importAll(require.context("../public/images/cakes/", true, /\.jpg$/));
   }
 };
 </script>
@@ -60,10 +103,11 @@ export default {
 body {
   background: #c5deea;
   background: linear-gradient(45deg, #c5deea 0%, #8abbd7 31%, #066dab 100%);
+  scroll-behavior: smooth;
 }
 
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: Rancho, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -73,13 +117,55 @@ body {
 }
 
 h1 {
-  font-family: Rancho;
   font-size: 3rem;
   color: #fff;
   text-shadow: #222 2px 2px;
 }
 
+.arrow {
+  a {
+    transform: rotate(90deg);
+    text-decoration: none;
+    color: #fff;
+    text-shadow: #222 1px 1px;
+    font-size: xx-large;
+  }
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.summary {
+  max-width: 700px;
+  margin: 0 auto;
+  p {
+    text-align: left;
+
+    font-size: 1.75rem;
+    color: #efefef;
+    text-shadow: #222 1px 1px;
+  }
+}
+
 .gallery {
+  padding-top: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: 200px;
@@ -108,16 +194,20 @@ h1 {
   }
 }
 
-// @media (max-width: 500px) {
-//   .gallery {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     &__image {
-//       width: 90%;
-//       height: 90%;
-//       margin: 5px 0;
-//     }
-//   }
-// }
+.imgBox figcaption {
+  font-size: 1.5rem;
+}
+
+footer {
+  margin: 2rem auto;
+
+  font-size: 1.25rem;
+  color: #222;
+  a {
+    color: #222;
+    &:hover {
+      color: #369;
+    }
+  }
+}
 </style>
