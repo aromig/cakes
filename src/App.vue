@@ -11,25 +11,35 @@
     </div>
     <div class="summary">
       <p>
-        I've been baking and decorating my own birthday cakes since my oldest
-        son turned two years old. When I started, my skills were very mediocre
-        with me baking the cake in a large casserole dish and only frosting the
-        top. That kind of bare-minimum effort. Yikes!
+        I've been baking and decorating my own cakes since my oldest son turned
+        two years old. When I started, my skills were very mediocre with me
+        baking the cake in a large casserole dish and only frosting the top.
+        That kind of bare-minimum effort. Yikes!
       </p>
       <p>
         Fortunately my confectionary skills have improved a bit over the years.
-        I'm still an amateur - far from profesional grade - but baking is one of
-        my pleasures in life. I don't have to be perfect as long as the cake
-        looks nice and people are happy with it. I have worked with frosting for
-        most of my creations but have recently been learning how to handle
-        fondant (and making my own buttercream from scratch) since this past
-        December.
+        I'm still an amateur - far from profesional grade - but cooking is one
+        of my pleasures in life, especially when making cakes. I don't have to
+        be perfect as long as the cake looks nice and people are happy with it.
+        I have worked with frosting for most of my creations but have recently
+        been learning how to handle fondant and making my own buttercream from
+        scratch since this past December.
       </p>
       <p>
         The gallery below is in reverse chronological order (newest to oldest).
-        It's not a complete representation - sometimes the kids just want plain
-        cupcakes. Then I tell them they are boooring!
+        It's not a complete representation of what I've made - photos get
+        misplaced, some deserve only
+        <a
+          href="https://www.cakewrecks.com/"
+          target="_blank"
+          aria-label="Go to Cake Wrecks .com"
+          >Cake Wrecks</a
+        >
+        praise, and sometimes these kids only want plain looking cupcakes.
+        <em>Sigh...</em> That's when I start putting gummy sharks and cocktail
+        umbrellas on them.
       </p>
+      <p>Enjoy!</p>
     </div>
     <div id="gallery" class="gallery">
       <div
@@ -161,6 +171,12 @@ h1 {
     font-size: 1.75rem;
     color: #efefef;
     text-shadow: #222 1px 1px;
+  }
+  a {
+    color: #fff;
+    &:hover {
+      color: #369;
+    }
   }
 }
 
