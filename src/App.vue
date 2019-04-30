@@ -195,8 +195,10 @@ h1 {
       transform: scale(1.02);
     }
     &:nth-of-type(1),
-    &:nth-of-type(3n + 1) {
+    &:nth-of-type(2n + 1) {
       grid-row: span 2;
+    }
+    &:nth-of-type(3n + 1) {
       grid-column: span 2;
     }
     & img {

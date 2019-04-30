@@ -4,7 +4,9 @@ import VueLazyload from "vue-lazyload";
 
 Vue.config.productionTip = false;
 
-Vue.use(VueLazyload);
+Vue.use(VueLazyload, {
+  loading: "/images/cake-icon.png"
+});
 
 new Vue({
   render: h => h(App)
