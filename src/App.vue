@@ -49,7 +49,7 @@
         class="gallery__image"
       >
         <img
-          :src="image.thumbUrl"
+          v-lazy="image.thumbUrl"
           :alt="image.caption"
           :title="image.caption"
         />
