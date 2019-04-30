@@ -61,11 +61,9 @@
       ></ImageBox>
     </div>
     <footer>
-      Site built with
+      Built with
       <a href="https://vuejs.org" target="_blank">Vue.js</a> and
-      <a href="https://github.com/aromig/vue-image-box" target="_blank"
-        >vue-image-box</a
-      >
+      <span style="color: red">❤</span>️
     </footer>
   </div>
 </template>
