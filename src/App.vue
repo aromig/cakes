@@ -17,7 +17,7 @@
         That kind of bare-minimum effort. Yikes!
       </p>
       <p>
-        Fortunately my confectionary skills have improved a bit over the years.
+        Fortunately my confectionery skills have improved a bit over the years.
         I'm still an amateur - far from profesional grade - but cooking is one
         of my pleasures in life, especially when making cakes. I don't have to
         be perfect as long as the cake looks nice and people are happy with it.
