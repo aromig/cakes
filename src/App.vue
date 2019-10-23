@@ -81,14 +81,6 @@ export default {
     showImage: function(idx) {
       this.imageIndex = idx;
     }
-    /* *** Don't need; importing from JSON now
-    importAll(file) {
-      file
-        .keys()
-        .reverse()
-        .forEach(file => this.images.push(this.imageDir + file.slice(2)));
-    }
-    */
   },
   data() {
     return {
@@ -96,11 +88,6 @@ export default {
       imageIndex: null,
       images: [...cakesJSON]
     };
-  },
-  mounted() {
-    // *** Don't need; importing from JSON now
-    // Gather file names from cakes directory
-    // this.importAll(require.context("../public/images/cakes/", true, /\.jpg$/));
   }
 };
 </script>
