@@ -95,10 +95,13 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Rancho");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #c5deea;
   background: linear-gradient(45deg, #c5deea 0%, #8abbd7 31%, #066dab 100%);
-  scroll-behavior: smooth;
 }
 
 #app {
