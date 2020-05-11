@@ -1,5 +1,10 @@
 [
   {
+    "imageUrl": "/images/cakes/2020_Bday_Nick.jpg",
+    "thumbUrl": "/images/cakes/t/2020_Bday_Nick.jpg",
+    "caption": "Pokémon: Pikachu (2020)"
+  },
+  {
     "imageUrl": "/images/cakes/2020_Easter.jpg",
     "thumbUrl": "/images/cakes/t/2020_Easter.jpg",
     "caption": "Easter Flower Cake (2020)"
@@ -12,12 +17,12 @@
   {
     "imageUrl": "/images/cakes/2019_BandBanquet.jpg",
     "thumbUrl": "/images/cakes/t/2019_BandBanquet.jpg",
-    "caption": "Cake for Wayne Music Club's Post-Season Banquet (2019)"
+    "caption": "Wayne Music Club's Post-Season Banquet (2019)"
   },
   {
     "imageUrl": "/images/cakes/2019_Bday_Adam.jpg",
     "thumbUrl": "/images/cakes/t/2019_Bday_Adam.jpg",
-    "caption": "Penguin Cake for 40th Birthday (2019)"
+    "caption": "Penguin (2019)"
   },
   {
     "imageUrl": "/images/cakes/2019_EagleScout_Ben.jpg",
