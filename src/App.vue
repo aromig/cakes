@@ -14,16 +14,16 @@
         I've been baking and decorating my own cakes since my oldest son turned
         two years old. When I started, my skills were very mediocre with me
         baking the cake in a large casserole dish and only frosting the top.
-        That kind of bare-minimum effort. Yikes!
+        That kind of bare-minimum effort. 🤷🏻‍♂️
       </p>
       <p>
         Fortunately my confectionery skills have improved a bit over the years.
         I'm still an amateur - far from profesional grade - but cooking is one
         of my pleasures in life, especially when making cakes. I don't have to
         be perfect as long as the cake looks nice and people are happy with it.
-        I have worked with frosting for most of my creations but have recently
-        been learning how to handle fondant and making my own buttercream from
-        scratch since this past December.
+        I have worked with store-bought frosting for most of my creations but
+        have been learning how to handle fondant and making my own buttercream
+        from scratch. 👨🏼‍🍳
       </p>
       <p>
         The gallery below is in reverse chronological order (newest to oldest).
@@ -37,7 +37,7 @@
         >
         praise, and sometimes these kids only want plain looking cupcakes.
         <em>Sigh...</em> That's when I start putting gummy sharks and cocktail
-        umbrellas on them.
+        umbrellas on them. 🦈
       </p>
       <p>Enjoy!</p>
     </div>
@@ -101,7 +101,7 @@ html {
 
 body {
   background: #c5deea;
-  background: linear-gradient(45deg, #c5deea 0%, #8abbd7 31%, #066dab 100%);
+  background: linear-gradient(45deg, #c5deea 0%, #31a8f1 31%, #066dab 100%);
 }
 
 #app {
@@ -122,16 +122,17 @@ h1 {
 
 .arrow {
   a {
-    transform: rotate(90deg);
+    display: block;
     text-decoration: none;
     color: #fff;
     text-shadow: #222 1px 1px;
     font-size: xx-large;
+    font-weight: bold;
   }
 }
 
 .bounce {
-  animation: bounce 2s infinite;
+  animation: bounce 1.75s infinite;
 }
 
 @keyframes bounce {
