@@ -46,19 +46,17 @@
         v-for="(image, imageIndex) in images"
         :key="imageIndex"
         @click="showImage(imageIndex)"
-        class="gallery__image"
-      >
+        class="gallery__image">
         <img
-          v-lazy="image.thumbUrl"
+          :src="image.thumbUrl"
           :alt="image.caption"
           :title="image.caption"
-        />
+          loading="lazy" />
       </div>
       <ImageBox
         :images="images"
         :index="imageIndex"
-        @close="imageIndex = null"
-      ></ImageBox>
+        @close="imageIndex = null"></ImageBox>
     </div>
     <footer>
       Built with
@@ -75,20 +73,20 @@ import cakesJSON from "./cakes.json";
 export default {
   name: "app",
   components: {
-    ImageBox
+    ImageBox,
   },
   methods: {
-    showImage: function(idx) {
+    showImage: function (idx) {
       this.imageIndex = idx;
-    }
+    },
   },
   data() {
     return {
       bgColor: "rgba(51, 51, 51, .9)",
       imageIndex: null,
-      images: [...cakesJSON]
+      images: [...cakesJSON],
     };
-  }
+  },
 };
 </script>
 
